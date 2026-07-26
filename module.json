@@ -1,0 +1,61 @@
+{
+  "id": "nomemes-homebrew",
+  "title": "Lemur's Balance Patch",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Nomemes Jokemuch",
+      "flags": {}
+    },
+    {
+      "name": "Lemur",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "nomemes-homebrew": {
+      "pf2e-homebrew": {
+        "weaponTraits": {
+          "rush": {
+            "label": "Rush",
+            "description": "<p>Later.</p>"
+          }
+        }
+      }
+    }
+  },
+  "packs": [
+    {
+      "name": "le-classes",
+      "label": "Le-Classes",
+      "path": "packs/le-classes",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "le-macros",
+      "label": "Le-Macroses",
+      "path": "packs/le-macros",
+      "type": "Macro",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "description": "",
+  "url": "https://github.com/Nomemes-Jokemuch/pf2e-lemur-patch",
+  "manifest": "https://raw.githubusercontent.com/Nomemes-Jokemuch/pf2e-lemur-patch/main/module.json",
+  "download": "https://github.com/Nomemes-Jokemuch/pf2e-lemur-patch/releases/latest/download/pf2e-lemur-patch.zip"
+}
