@@ -1,7 +1,7 @@
 {
   "id": "nomemes-homebrew",
   "title": "Lemur's Balance Patch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
