@@ -1,7 +1,10 @@
 {
   "id": "nomemes-homebrew",
   "title": "Lemur's Balance Patch",
-  "version": "1.0.5",
+  "version": "1.0.6",
+    "esmodules": [
+    "scripts/brew.js"
+  ],
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -47,6 +50,17 @@
       "path": "packs/le-macros",
       "type": "Macro",
       "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "le-journal",
+      "label": "Le-Journals",
+      "path": "packs/le-journal",
+      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
