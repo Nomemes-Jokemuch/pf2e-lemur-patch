@@ -6,5 +6,4 @@ https://docs.google.com/document/d/1CO83ZkqR2ciydCpJBZtagxCm-gc9ynxcshb56ax7F9M/
 
 ---
 Manifest link
-
 https://raw.githubusercontent.com/Nomemes-Jokemuch/pf2e-lemur-patch/main/module.json
