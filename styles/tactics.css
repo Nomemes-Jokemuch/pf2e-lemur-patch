@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Tactic Item (строка тактики в листе)
+   ========================================================================== */
+
 .tactic-item {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +12,7 @@
     position: relative;
 }
 
+/* Раскрывающееся описание тактики */
 .tactic-item > .item-summary {
     flex: 1 0 100%;
     width: 100%;
@@ -15,15 +20,14 @@
     padding-left: 0.25rem;
 }
 
-/* Toggle */
+/* Чекбокс "Prepared" */
 .prepared-toggle {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
 
-
-/* Category icon */
+/* Иконка категории (⚔ / ✦ / ➜) */
 .tactic-icon {
     flex: 0 0 1.4em;
     font-size: 1.1em;
@@ -31,8 +35,7 @@
     text-align: center;
 }
 
-
-/* Всё содержимое тактики в одну строку */
+/* Контейнер с основной информацией о тактике */
 .tactic-info {
     display: flex;
     align-items: center;
@@ -41,8 +44,7 @@
     gap: 0.5rem;
 }
 
-
-/* Название */
+/* Основная строка: название + глиф + мета + brandish + frequency */
 .tactic-main-line {
     display: flex;
     align-items: center;
@@ -50,8 +52,7 @@
     min-width: 0;
 }
 
-
-/* Name */
+/* Название тактики */
 .tactic-main-line .name {
     margin: 0;
     white-space: nowrap;
@@ -59,8 +60,7 @@
     text-overflow: ellipsis;
 }
 
-
-/* Action glyph */
+/* Глиф действий (1, 2, 3) */
 .tactic-main-line .action-glyph {
     flex: 0 0 auto;
     font-family: "Pathfinder2eActions",
@@ -70,8 +70,7 @@
     line-height: 1;
 }
 
-
-/* Category */
+/* Профишенси + категория (Trained Offensive и т.д.) */
 .tactic-meta {
     flex: 0 0 auto;
     font-size: 0.85em;
@@ -79,28 +78,17 @@
     white-space: nowrap;
 }
 
-
-/* Brandish + frequency */
-.tactic-sub {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 0;
-    margin: 0;
-    font-size: 0.8em;
-    opacity: 0.75;
-    white-space: nowrap;
-}
-
-
-/* Brandish */
-.tactic-sub .brandish {
+/* Метка Brandish */
+.tactic-item .brandish {
     font-weight: 600;
     color: var(--color-text-hyperlink);
+    font-size: 0.85em;
 }
 
+/* ==========================================================================
+   Frequency 
+   ========================================================================== */
 
-/* Frequency — стандартный вид Foundry/PF2e */
 .tactic-item .frequency {
     display: inline-flex;
     align-items: center;
@@ -147,9 +135,9 @@
     opacity: 1;
 }
 
-/* ========================================
-   Tactic Browser
-   ======================================== */
+/* ==========================================================================
+   Tactic Browser (диалог добавления тактик)
+   ========================================================================== */
 
 .window-app.tactic-browser-dialog {
     width: 1600px !important;
@@ -165,7 +153,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-
     width: 100%;
     height: 100%;
     min-height: 0;
@@ -175,7 +162,6 @@
     display: flex;
     align-items: end;
     gap: 1rem;
-
     flex: 0 0 auto;
 }
 
@@ -194,30 +180,19 @@
 .tactic-folio-counter {
     flex: 0 0 auto;
     white-space: nowrap;
-
     padding-bottom: 0.35rem;
-
     font-size: 1rem;
     opacity: 0.8;
 }
 
-
-/* ========================================
-   Preview
-   ======================================== */
-
+/* Превью выбранной тактики */
 .tactic-preview {
     flex: 1 1 auto;
-
     min-height: 0;
-
     overflow-y: auto;
-
     padding: 1rem;
-
     border: 1px solid var(--color-border-light-primary);
     border-radius: 4px;
-
     background: var(--color-bg-option);
 }
 
@@ -225,21 +200,16 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
-
     border-bottom: 1px solid var(--color-border-light-tertiary);
 }
 
 .tactic-preview-image {
     width: 64px;
     height: 64px;
-
     flex: 0 0 auto;
-
     object-fit: contain;
-
     border: 0;
     border-radius: 4px;
 }
@@ -256,9 +226,7 @@
 .tactic-preview-meta {
     display: flex;
     gap: 1rem;
-
     margin-top: 0.35rem;
-
     font-size: 0.9em;
     opacity: 0.7;
 }
@@ -271,37 +239,23 @@
     margin-bottom: 0;
 }
 
-
-/* ========================================
-   Loading / Empty
-   ======================================== */
-
+/* Состояния загрузки / пустого превью */
 .tactic-preview-loading,
 .tactic-preview-empty {
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-height: 400px;
-
     gap: 0.5rem;
-
     text-align: center;
-
     opacity: 0.5;
 }
 
-
-/* ========================================
-   Buttons
-   ======================================== */
-
+/* Кнопки в диалоге */
 .tactic-browser-buttons {
     display: flex;
     justify-content: flex-end;
-
     gap: 0.5rem;
-
     flex: 0 0 auto;
 }
 
@@ -309,22 +263,23 @@
     min-width: 120px;
 }
 
-/* Header секции тактик – flex-строка */
+/* ==========================================================================
+   Header секции Tactics на листе персонажа
+   ========================================================================== */
+
 .tactics-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.15rem;  /* небольшой отступ между заголовком и контролами */
+    gap: 0.15rem;
 }
 
-/* Блок счётчиков + кнопки */
 .tactics-controls {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* Счётчики */
 .tactics-counters {
     display: flex;
     gap: 0.75rem;
@@ -333,10 +288,9 @@
 }
 
 .tactics-counters span {
-    white-space: nowrap;        /* запрещаем перенос текста внутри каждого спана */
+    white-space: nowrap;
 }
 
-/* Кнопки внутри controls – меньшего размера */
 .tactics-controls button {
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
