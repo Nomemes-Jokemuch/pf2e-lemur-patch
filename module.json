@@ -1,10 +1,14 @@
 {
   "id": "nomemes-homebrew",
   "title": "Lemur's Balance Patch",
-  "version": "1.0.6",
+  "version": "1.0.7",
     "esmodules": [
-    "scripts/brew.js"
+    "scripts/brew.js",
+    "scripts/tactics-ui.js"
   ],
+  "styles": [
+    "styles/tactics.css"
+  ], 
   "compatibility": {
     "minimum": "14",
     "verified": "14"

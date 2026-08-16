@@ -1,0 +1,345 @@
+.tactic-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--color-border-light-tertiary);
+    position: relative;
+}
+
+.tactic-item > .item-summary {
+    flex: 1 0 100%;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+/* Toggle */
+.prepared-toggle {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Category icon */
+.tactic-icon {
+    flex: 0 0 1.4em;
+    font-size: 1.1em;
+    width: 1.4em;
+    text-align: center;
+}
+
+
+/* Всё содержимое тактики в одну строку */
+.tactic-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    gap: 0.5rem;
+}
+
+
+/* Название */
+.tactic-main-line {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+
+/* Name */
+.tactic-main-line .name {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Action glyph */
+.tactic-main-line .action-glyph {
+    flex: 0 0 auto;
+    font-family: "Pathfinder2eActions",
+        "Pathfinder2eActions-Regular",
+        sans-serif;
+    font-size: 1.3em;
+    line-height: 1;
+}
+
+
+/* Category */
+.tactic-meta {
+    flex: 0 0 auto;
+    font-size: 0.85em;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+
+/* Brandish + frequency */
+.tactic-sub {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+    opacity: 0.75;
+    white-space: nowrap;
+}
+
+
+/* Brandish */
+.tactic-sub .brandish {
+    font-weight: 600;
+    color: var(--color-text-hyperlink);
+}
+
+
+/* Frequency — стандартный вид Foundry/PF2e */
+.tactic-item .frequency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.tactic-item .frequency-value {
+    width: 1.6em;
+    height: 1.6em;
+    min-width: 1.6em;
+    min-height: 1.6em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.6em;
+    background: var(--color-bg-option, rgba(255, 255, 255, 0.12));
+    border: 1px solid var(--color-border-light-primary, #666);
+    border-radius: 3px;
+    color: inherit;
+    box-sizing: border-box;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.tactic-item .frequency-value::-webkit-outer-spin-button,
+.tactic-item .frequency-value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tactic-item .frequency-value:focus {
+    outline: none;
+    border-color: var(--color-border-highlight, #8ab);
+    box-shadow: 0 0 0 1px var(--color-border-highlight, #8ab);
+    background: var(--color-bg-option, rgba(255, 255, 255, 0.18));
+}
+
+.tactic-item .frequency-per {
+    color: inherit;
+    opacity: 1;
+}
+
+/* ========================================
+   Tactic Browser
+   ======================================== */
+
+.window-app.tactic-browser-dialog {
+    width: 1600px !important;
+    max-width: 98vw !important;
+}
+
+.window-app.tactic-browser-dialog .window-content {
+    min-height: 0;
+    padding: 0.75rem;
+}
+
+.tactic-browser {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.tactic-browser-top {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+
+    flex: 0 0 auto;
+}
+
+.tactic-selector-group {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+}
+
+.tactic-selector {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+}
+
+.tactic-folio-counter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+
+    padding-bottom: 0.35rem;
+
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   Preview
+   ======================================== */
+
+.tactic-preview {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding: 1rem;
+
+    border: 1px solid var(--color-border-light-primary);
+    border-radius: 4px;
+
+    background: var(--color-bg-option);
+}
+
+.tactic-preview-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+
+    border-bottom: 1px solid var(--color-border-light-tertiary);
+}
+
+.tactic-preview-image {
+    width: 64px;
+    height: 64px;
+
+    flex: 0 0 auto;
+
+    object-fit: contain;
+
+    border: 0;
+    border-radius: 4px;
+}
+
+.tactic-preview-title {
+    min-width: 0;
+}
+
+.tactic-preview-title h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tactic-preview-meta {
+    display: flex;
+    gap: 1rem;
+
+    margin-top: 0.35rem;
+
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.tactic-preview-description {
+    line-height: 1.45;
+}
+
+.tactic-preview-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   Loading / Empty
+   ======================================== */
+
+.tactic-preview-loading,
+.tactic-preview-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 400px;
+
+    gap: 0.5rem;
+
+    text-align: center;
+
+    opacity: 0.5;
+}
+
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.tactic-browser-buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 0.5rem;
+
+    flex: 0 0 auto;
+}
+
+.tactic-browser-buttons button {
+    min-width: 120px;
+}
+
+/* Header секции тактик – flex-строка */
+.tactics-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;  /* небольшой отступ между заголовком и контролами */
+}
+
+/* Блок счётчиков + кнопки */
+.tactics-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Счётчики */
+.tactics-counters {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.9em;
+    flex-wrap: nowrap;
+}
+
+.tactics-counters span {
+    white-space: nowrap;        /* запрещаем перенос текста внутри каждого спана */
+}
+
+/* Кнопки внутри controls – меньшего размера */
+.tactics-controls button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
