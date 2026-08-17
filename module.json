@@ -76,6 +76,15 @@
   "manifest": "https://raw.githubusercontent.com/Nomemes-Jokemuch/pf2e-lemur-patch/main/module.json",
   "download": "https://github.com/Nomemes-Jokemuch/pf2e-lemur-patch/archive/refs/heads/main.zip",
   "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.4.1"
+        }
+      }
+    ],
     "requires": [
       {
         "id": "pf2e-toolbelt",
